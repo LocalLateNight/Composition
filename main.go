@@ -6,7 +6,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	netUrl "net/url"
-	"time"
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/urlfetch"
 	"os"
@@ -21,7 +20,7 @@ type ArticleResponse struct {
 	Excerpt       string    `json:"excerpt"`
 	Title         string    `json:"title"`
 	URL           string    `json:"url"`
-	DatePublished time.Time `json:"date_published"`
+	DatePublished string `json:"date_published"`
 }
 
 // API Response for /youtube
@@ -30,7 +29,7 @@ type YoutubeResponse struct {
 	URL           string    `json:"url"`
 	AuthorName    string    `json:"author_name"`
 	Thumbnail     string    `json:"thumbnail"`
-	DatePublished time.Time `json:"date_published"`
+	DatePublished string `json:"date_published"`
 	Description   string    `json:"description"`
 }
 
@@ -47,7 +46,7 @@ type GeneratedYoutubeResponse struct {
 		Etag    string `json:"etag"`
 		ID      string `json:"id"`
 		Snippet struct {
-			PublishedAt time.Time `json:"publishedAt"`
+			PublishedAt string `json:"publishedAt"`
 			ChannelID   string    `json:"channelId"`
 			Title       string    `json:"title"`
 			Description string    `json:"description"`
