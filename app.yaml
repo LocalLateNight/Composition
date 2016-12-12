@@ -1,11 +1,10 @@
-application: composition
+application: local-late-night
+module: composition
 runtime: go
 api_version: go1
-
 handlers:
-- url: /.*
+- url: composition.locallatenight.com/.*
   script: _go_app
-
 env_variables:
   MERCURY_TOKEN: 'LQtDzKCDqIeWBq3Z7jUVjTlTJ1YaukBCgEf4rBJM'
   YOUTUBE_TOKEN: 'AIzaSyAgzM8tiOMsN8w2V1jgMv3eEYxF4N6uA04'
